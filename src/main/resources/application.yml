@@ -1,0 +1,22 @@
+---
+kafka:
+    streams:
+        source_topic: source-topic
+        sink_topic: sink-topic
+        application.id: streams-service
+    bootstrap:
+        servers: localhost:9092
+    producer:
+        client.id: streams-producer
+    consumer:
+        group.id: streams-consumer
+    key:
+        serializer: org.apache.kafka.common.serialization.StringSerializer
+        deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value:
+        serializer: org.apache.kafka.common.serialization.StringSerializer
+        deserializer: org.apache.kafka.common.serialization.StringDeserializer
+---
+#spring:
+#    profiles: local
+
