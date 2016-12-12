@@ -1,21 +1,21 @@
-# kafka-demo
+# kafka-streams-demo
 
-Example code that reads a gzip of 911 call data and publishes the call data to a Kafka topic.
+Demo of Kafka streams including a message producer, a Kafka stream processor, and a message Consumer
 
-To build executable jar, run from a terminal:
-
-$ gradle clean build
-$ gradle shadowJar
-
-To run the 911 call producer, you must have:
+### To run the demo, you must have:
 
 1. Kafka (version 0.10.0.1) installed
 2. Started Kafka (and Zookeeper)
+   assuming Kafka was installed at ~/kafka_2.11-0.10.0.1
+   then:
+       run zookeeper (do this first)
+       cd ~/kafka_2.11-0.10.0.1 && ./bin/zookeeper-server-start.sh config/zookeeper.properties
+       run Kafka
+       cd ~/kafka_2.11-0.10.0.1 && ./bin/kafka-server-start.sh config/server.properties
 
-then, from a terminal
+### To build executable jar, run from the project root in a terminal:
+$ gradle clean build
+$ gradle shadowJar
 
-$ java -jar kafka-demo-0.1-all.jar [path to gzip of 911 calls]
-
-if path is unspecified, the code will use the large chronological file located at:
-
-src/main/resources/Seattle_Real_Time_Fire_911_Calls_Chrono.csv.gz
+### To run from the executable (uber) jar:
+$ java -jar kafka-demo-0.1-all.jar
