@@ -9,10 +9,10 @@ Demo of Kafka streams including a message producer, a Kafka stream processor, an
 
 #### Assuming Kafka was installed at ~/kafka_2.11-0.10.0.1
    then:
-       * run zookeeper (do this first)
-       * cd ~/kafka_2.11-0.10.0.1 && ./bin/zookeeper-server-start.sh config/zookeeper.properties
-       * run Kafka
-       * cd ~/kafka_2.11-0.10.0.1 && ./bin/kafka-server-start.sh config/server.properties
+      - run zookeeper (do this first)
+      - cd ~/kafka_2.11-0.10.0.1 && ./bin/zookeeper-server-start.sh config/zookeeper.properties
+      - run Kafka
+      - cd ~/kafka_2.11-0.10.0.1 && ./bin/kafka-server-start.sh config/server.properties
 
 ### To build executable jar, run from the project root in a terminal:
 $ gradle clean build
